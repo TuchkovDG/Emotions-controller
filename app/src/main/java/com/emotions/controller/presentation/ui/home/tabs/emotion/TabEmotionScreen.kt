@@ -20,12 +20,11 @@ class TabEmotionFragment : BindingViewModelFragment<FragmentTabEmotionBinding>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        R.color.dark
         viewModel.event.observe(this, Observer { event ->
             event?.getContentIfNotHandledOrReturnNull()?.let {
                 findNavController().navigate(
                     TabEmotionFragmentDirections.actionTabsEmotionFragmentToAddEmotionFragment(
-                        it.ordinal
+                        it.ordinal, null
                     )
                 )
             }
@@ -108,7 +107,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickEcstasyInfo() {
-        sendEvent(Emotion.ECSTASY)
+        sendEventInfo(Emotion.ECSTASY)
     }
 
     private fun pickVigilance() {
@@ -116,7 +115,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickVigilanceInfo() {
-        sendEvent(Emotion.VIGILANCE)
+        sendEventInfo(Emotion.VIGILANCE)
     }
 
     private fun pickRage() {
@@ -124,7 +123,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickRageInfo() {
-        sendEvent(Emotion.RAGE)
+        sendEventInfo(Emotion.RAGE)
     }
 
     private fun pickLoathing() {
@@ -132,7 +131,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickLoathingInfo() {
-        sendEvent(Emotion.LOATHING)
+        sendEventInfo(Emotion.LOATHING)
     }
 
     private fun pickGrief() {
@@ -140,7 +139,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickGriefInfo() {
-        sendEvent(Emotion.GRIEF)
+        sendEventInfo(Emotion.GRIEF)
     }
 
     private fun pickAmazement() {
@@ -148,7 +147,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickAmazementInfo() {
-        sendEvent(Emotion.AMAZEMENT)
+        sendEventInfo(Emotion.AMAZEMENT)
     }
 
     private fun pickTerror() {
@@ -156,7 +155,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickTerrorInfo() {
-        sendEvent(Emotion.TERROR)
+        sendEventInfo(Emotion.TERROR)
     }
 
     private fun pickAdmiration() {
@@ -164,7 +163,7 @@ class TabEmotionViewModel : ViewModel() {
     }
 
     private fun pickAdmirationInfo() {
-        sendEvent(Emotion.ADMIRATION)
+        sendEventInfo(Emotion.ADMIRATION)
     }
 
     private fun sendEvent(emotion: Emotion) {

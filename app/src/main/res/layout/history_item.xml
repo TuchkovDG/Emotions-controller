@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.emotions.controller.domain.model.EmotionItem" />
+
+    </data>
+
+    <FrameLayout style="@style/MatchWrap">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ll_history_item"
+            style="@style/MatchWrap"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/half_margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/half_margin"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/half_margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textSize="@dimen/scale_default"
+                    app:emotion="@{item.emotion}" />
+
+                <TextView
+                    android:id="@+id/tv_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginBottom="@dimen/half_margin"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textSize="@dimen/scale_middle"
+                    app:dateTime="@{item.timeInMillis}" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</layout>

@@ -17,9 +17,9 @@ val appPrefModule = module {
 
 val viewModelsModule = module {
     viewModel { TabEmotionViewModel() }
-    viewModel { AddEmotionViewModel() }
+    viewModel { AddEmotionViewModel(get()) }
     viewModel { InfoEmotionViewModel() }
-    viewModel { TabHistoryViewModel() }
+    viewModel { TabHistoryViewModel(get()) }
     viewModel { TabStatisticsViewModel() }
     viewModel { TabSettingsViewModel() }
 }
