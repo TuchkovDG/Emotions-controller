@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tabsEmotionFragment"
+        android:icon="@drawable/ic_tabs_emotion"
+        android:orderInCategory="1"
+        android:title="@string/tabs_emotion"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tabHistoryFragment"
+        android:icon="@drawable/ic_tabs_history"
+        android:orderInCategory="2"
+        android:title="@string/tabs_history"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tabStatisticsFragment"
+        android:icon="@drawable/ic_tabs_statistics"
+        android:orderInCategory="3"
+        android:title="@string/tabs_statistics"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tabSettingsFragment"
+        android:icon="@drawable/ic_tabs_settings"
+        android:orderInCategory="4"
+        android:title="@string/tabs_settings"
+        app:showAsAction="ifRoom" />
+
+</menu>
