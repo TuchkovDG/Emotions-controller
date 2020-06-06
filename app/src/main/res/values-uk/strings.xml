@@ -6,4 +6,13 @@
     <string name="tabs_history">Історія</string>
     <string name="tabs_statistics">Статистика</string>
     <string name="tabs_settings">Налаштування</string>
+
+    <string name="ecstasy">Восторг</string>
+    <string name="vigilance">Настороженість</string>
+    <string name="rage">Гнів</string>
+    <string name="loathing">Огида</string>
+    <string name="grief">Горе</string>
+    <string name="amazement">Здивування</string>
+    <string name="terror">Жах</string>
+    <string name="admiration">Захоплення</string>
 </resources>

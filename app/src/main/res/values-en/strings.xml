@@ -6,4 +6,13 @@
     <string name="tabs_history">History</string>
     <string name="tabs_statistics">Statistics</string>
     <string name="tabs_settings">Settings</string>
+
+    <string name="ecstasy">Ecstasy</string>
+    <string name="vigilance">Vigilance</string>
+    <string name="rage">Rage</string>
+    <string name="loathing">Loathing</string>
+    <string name="grief">Grief</string>
+    <string name="amazement">Amazement</string>
+    <string name="terror">Terror</string>
+    <string name="admiration">Admiration</string>
 </resources>

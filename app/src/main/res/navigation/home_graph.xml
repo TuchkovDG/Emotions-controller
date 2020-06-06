@@ -9,7 +9,32 @@
         android:id="@+id/tabsEmotionFragment"
         android:name="com.emotions.controller.presentation.ui.home.tabs.emotion.TabEmotionFragment"
         android:label="@string/tabs_emotion"
-        tools:layout="@layout/fragment_tab_emotion" />
+        tools:layout="@layout/fragment_tab_emotion">
+        <action
+            android:id="@+id/action_tabsEmotionFragment_to_addEmotionFragment"
+            app:destination="@id/addEmotionFragment" />
+        <action
+            android:id="@+id/action_tabsEmotionFragment_to_infoEmotionFragment"
+            app:destination="@id/infoEmotionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEmotionFragment"
+        android:name="com.emotions.controller.presentation.ui.home.tabs.emotion.AddEmotionFragment"
+        android:label="AddEmotionFragment">
+        <argument
+            android:name="emotion"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoEmotionFragment"
+        android:name="com.emotions.controller.presentation.ui.home.tabs.emotion.InfoEmotionFragment"
+        android:label="InfoEmotionFragment">
+        <argument
+            android:name="emotion"
+            app:argType="integer" />
+    </fragment>
 
     <fragment
         android:id="@+id/tabHistoryFragment"

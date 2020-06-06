@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.emotions.controller.presentation.ui.base.input.EmotionViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.emotions.controller.presentation.ui.base.input.EmotionViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/MatchParent"
+        android:layout_weight="1"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> viewModel.onClick()}"
+        app:colorId="@{viewModel.colorId}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/MatchParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/scale_default"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textId="@{viewModel.textId}"
+                tools:text="@string/tabs_emotion" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{() -> viewModel.onClickInfo()}"
+                android:padding="@dimen/margin"
+                android:src="@drawable/ic_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

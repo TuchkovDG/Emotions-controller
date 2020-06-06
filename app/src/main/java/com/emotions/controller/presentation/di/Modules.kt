@@ -1,6 +1,8 @@
 package com.emotions.controller.presentation.di
 
 import com.emotions.controller.presentation.internal.AppPreferences
+import com.emotions.controller.presentation.ui.home.tabs.emotion.AddEmotionViewModel
+import com.emotions.controller.presentation.ui.home.tabs.emotion.InfoEmotionViewModel
 import com.emotions.controller.presentation.ui.home.tabs.emotion.TabEmotionViewModel
 import com.emotions.controller.presentation.ui.home.tabs.history.TabHistoryViewModel
 import com.emotions.controller.presentation.ui.home.tabs.settings.TabSettingsViewModel
@@ -15,6 +17,8 @@ val appPrefModule = module {
 
 val viewModelsModule = module {
     viewModel { TabEmotionViewModel() }
+    viewModel { AddEmotionViewModel() }
+    viewModel { InfoEmotionViewModel() }
     viewModel { TabHistoryViewModel() }
     viewModel { TabStatisticsViewModel() }
     viewModel { TabSettingsViewModel() }

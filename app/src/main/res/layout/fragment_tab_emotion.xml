@@ -15,18 +15,71 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <androidx.constraintlayout.widget.ConstraintLayout style="@style/MatchParent">
+        <LinearLayout
+            style="@style/MatchParent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tabs_emotion"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.ecstasy}" />
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.vigilance}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.rage}" />
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.loathing}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.grief}" />
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.amazement}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.terror}" />
+
+                <include
+                    layout="@layout/input_emotion"
+                    app:viewModel="@{viewModel.admiration}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 

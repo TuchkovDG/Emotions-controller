@@ -7,4 +7,13 @@
     <color name="silver">#8E99AB</color>
     <color name="gold">#D1A05A</color>
     <color name="dark">#171A23</color>
+
+    <color name="ecstasy">#FECB00</color>
+    <color name="vigilance">#F7913D</color>
+    <color name="rage">#EE5B61</color>
+    <color name="loathing">#8973B3</color>
+    <color name="grief">#2683C6</color>
+    <color name="amazement">#0198CF</color>
+    <color name="terror">#00A652</color>
+    <color name="admiration">#8AC54F</color>
 </resources>
