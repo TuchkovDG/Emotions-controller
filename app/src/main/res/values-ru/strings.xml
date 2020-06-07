@@ -28,4 +28,11 @@
 
     <string name="history_is_empty">История пуста</string>
     <string name="to_generate_statistics_left">Щоб генерувати статистику, залишилося %s</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="language">Язык</string>
+    <string name="default_val">По умолчанию</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="ukrainian">Украинский</string>
+    <string name="reminder">Напоминание</string>
 </resources>

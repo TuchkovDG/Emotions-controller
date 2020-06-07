@@ -28,4 +28,11 @@
 
     <string name="history_is_empty">History is empty</string>
     <string name="to_generate_statistics_left">To generate statistics left %s</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="language">Language</string>
+    <string name="default_val">Default</string>
+    <string name="english">English</string>
+    <string name="russian">Russian</string>
+    <string name="ukrainian">Ukrainian</string>
+    <string name="reminder">Reminder</string>
 </resources>

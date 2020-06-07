@@ -18,13 +18,62 @@
         <androidx.constraintlayout.widget.ConstraintLayout style="@style/MatchParent">
 
             <TextView
+                android:id="@+id/tv_dark_theme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tabs_settings"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/margin"
+                android:text="@string/dark_theme"
+                app:layout_constraintBottom_toBottomOf="@+id/sc_tv_dark_theme"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sc_tv_dark_theme" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sc_tv_dark_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:text="@string/language"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_language_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_language_value" />
+
+            <TextView
+                android:id="@+id/tv_language_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:textColor="@color/gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sc_tv_dark_theme" />
+
+            <TextView
+                android:id="@+id/tv_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:text="@string/reminder"
+                app:layout_constraintBottom_toBottomOf="@+id/sc_tv_reminder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sc_tv_reminder" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sc_tv_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_language_value" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
