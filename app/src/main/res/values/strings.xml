@@ -34,4 +34,6 @@
     <string name="russian">Russian</string>
     <string name="ukrainian">Ukrainian</string>
     <string name="reminder">Reminder</string>
+    <string name="notification_title">Notification</string>
+    <string name="notification_text">What emotion are you experiencing right now?</string>
 </resources>

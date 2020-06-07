@@ -72,8 +72,33 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin"
                 android:layout_marginEnd="@dimen/margin"
+                android:checked="@{viewModel.isReminder}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_language_value" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:text="@string/time"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_time_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_time_value"
+                app:visibility="@{viewModel.isReminder}" />
+
+            <TextView
+                android:id="@+id/tv_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:onClick="@{() -> viewModel.changeTime()}"
+                android:textColor="@color/gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sc_tv_reminder"
+                app:time="@{viewModel.calendar}"
+                app:visibility="@{viewModel.isReminder}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

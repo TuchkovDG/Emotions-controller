@@ -16,7 +16,7 @@ class AppPreferences(context: Context) {
     private val MODE_NIGHT = Pair("MODE_NIGHT", 0)
     private val LANGUAGE = Pair("LANGUAGE", "")
     private val REMINDER = Pair("REMINDER", false)
-    private val TIME = Pair("TIME", "")
+    private val TIME = Pair("TIME", 0L)
 
     private inline fun SharedPreferences.edit(operation: (SharedPreferences.Editor) -> Unit) {
         val editor = edit()
@@ -66,12 +66,12 @@ class AppPreferences(context: Context) {
             it.putBoolean(REMINDER.first, value)
         }
 
-    var time: String
-        get() = preferences.getString(
+    var time: Long
+        get() = preferences.getLong(
             TIME.first,
             TIME.second
-        ).orEmpty()
+        )
         set(value) = preferences.edit {
-            it.putString(TIME.first, value)
+            it.putLong(TIME.first, value)
         }
 }

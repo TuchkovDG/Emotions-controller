@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.emotions.controller.presentation.ui.home.HomeActivity" />
+
+        <receiver android:name=".presentation.internal.ReminderBroadcast" />
     </application>
 
 </manifest>

@@ -35,4 +35,6 @@
     <string name="russian">Русский</string>
     <string name="ukrainian">Украинский</string>
     <string name="reminder">Напоминание</string>
+    <string name="notification_title">Уведомление</string>
+    <string name="notification_text">Какую эмоцию вы сейчас испытываете?</string>
 </resources>
