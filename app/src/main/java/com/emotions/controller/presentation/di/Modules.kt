@@ -20,7 +20,7 @@ val viewModelsModule = module {
     viewModel { AddEmotionViewModel(get()) }
     viewModel { InfoEmotionViewModel() }
     viewModel { TabHistoryViewModel(get()) }
-    viewModel { TabStatisticsViewModel() }
+    viewModel { TabStatisticsViewModel(get()) }
     viewModel { TabSettingsViewModel() }
 }
 
