@@ -37,4 +37,6 @@
     <string name="reminder">Reminder</string>
     <string name="notification_title">Notification</string>
     <string name="notification_text">What emotion are you experiencing right now?</string>
+    <string name="clear">Clear</string>
+    <string name="you_sure">Are you sure you want to clear all the information?</string>
 </resources>

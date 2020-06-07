@@ -27,7 +27,7 @@
     <string name="save">Зберегти</string>
 
     <string name="history_is_empty">Історія порожня</string>
-    <string name="to_generate_statistics_left">Для генерации статистики осталось %s</string>
+    <string name="to_generate_statistics_left">Щоб генерувати статистику, залишилося %s</string>
     <string name="dark_theme">Темна тема</string>
     <string name="language">Мова</string>
     <string name="default_val">За замовчуванням</string>
@@ -37,4 +37,6 @@
     <string name="reminder">Нагадування</string>
     <string name="notification_title">Повідомлення</string>
     <string name="notification_text">Які емоції ви зараз переживаєте?</string>
+    <string name="clear">Очистити</string>
+    <string name="you_sure">Ви впевнені, що хочете очистити всю інформацію?</string>
 </resources>

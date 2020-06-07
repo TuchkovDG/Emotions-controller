@@ -20,9 +20,13 @@ import com.emotions.controller.domain.model.Event
 import com.emotions.controller.presentation.internal.AppPreferences
 import com.emotions.controller.presentation.internal.ReminderBroadcast
 import com.emotions.controller.presentation.ui.base.BindingViewModelFragment
+import org.jetbrains.anko.noButton
+import org.jetbrains.anko.okButton
+import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.support.v4.selector
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class TabSettingsFragment : BindingViewModelFragment<FragmentTabSettingsBinding>() {
@@ -36,6 +40,10 @@ class TabSettingsFragment : BindingViewModelFragment<FragmentTabSettingsBinding>
         viewModel.event.observe(this, Observer { event ->
             event?.getContentIfNotHandledOrReturnNull()?.let {
                 when (it) {
+                    "exit" -> {
+                        cancel()
+                        activity?.finish()
+                    }
                     "time" -> {
                         showTimePicker { calendar ->
                             viewModel.calendar.set(calendar)
@@ -43,6 +51,16 @@ class TabSettingsFragment : BindingViewModelFragment<FragmentTabSettingsBinding>
                             cancel()
                             setRepeating()
                         }
+                    }
+                    "clear" -> {
+                        alert(getString(R.string.you_sure)) {
+                            okButton {
+                                viewModel.clearInfo()
+                            }
+                            noButton {}
+                        }.show()
+                    }
+                    else -> {
                     }
                 }
             }
@@ -230,8 +248,23 @@ class TabSettingsViewModel(
         setTime()
     }
 
+    fun clearInfo() {
+        with(preferences) {
+            list = ArrayList()
+            modeNight = 0
+            language = ""
+            reminder = false
+            time = 0L
+        }
+        sendEvent("exit")
+    }
+
     fun changeTime() {
         sendEvent("time")
+    }
+
+    fun onClear() {
+        sendEvent("clear")
     }
 
     private fun sendEvent(content: String) {
